@@ -1,0 +1,117 @@
+//
+//  dictionarycreat.cpp
+//  字典数据结构
+//
+//  Created by lq on 2019/9/23.
+//  Copyright ? 2019 Mr.liang. All rights reserved.
+//
+
+#include "dictionarycreat.hpp"
+#include <iostream>
+#include <string>
+using namespace std;
+
+dictionary_creat::dictionary_creat()
+{
+    head = new node;
+    tail = new node;
+    head->next = tail;
+    head->last = nullptr;
+    tail->last = head;
+    tail->next = nullptr;
+    length = 0;
+}
+
+dictionary_creat::~dictionary_creat()
+{
+    cout<<"bye"<<endl;
+}
+
+bool dictionary_creat::empty_check()
+{
+    if(length == 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+int dictionary_creat::get_size()
+{
+    return length;
+}
+
+void dictionary_creat::insert(student &element)
+{
+    tail->data = make_pair(element.first, element.second);
+    tail->next = new node;
+    node* p = tail;
+    tail = p->next;
+    tail->last = p;
+    tail->next = nullptr;
+    length++;
+}
+
+void dictionary_creat::erase(const string name)
+{
+    node* p = head->next;
+    while(p!=tail)
+    {
+        if(!(p->data).first.compare(name))
+        {
+            node* temp = p->last;
+            temp->next = p->next;
+            (p->next)->last = temp;
+            delete p;
+            break;
+        }
+        p = p->next;
+    }
+    length--;
+}
+
+student dictionary_creat::find(const float grade)
+{
+    node* p = head->next;
+    while(p!=tail)
+    {
+        if((p->data).second == grade)
+        {
+            cout<<"the student name for "<<grade<<" is "
+            <<(p->data).first;
+        }
+        p = p->next;
+    }
+    return p->data;
+}
+
+
+student dictionary_creat::find(const string name)
+{
+    node* p = head->next;
+    while(p!=tail)
+    {
+        if(!(p->data).first.compare(name))
+        {
+            cout<<"the grade for "<<name<<" is "
+            <<(p->data).second;
+        }
+        p = p->next;
+    }
+    return p->data;
+}
+
+void dictionary_creat::show()const
+{
+    node* p =head->next;
+    while(p!=tail)
+    {
+        cout<<"student name: "<<p->data.first
+        <<"student grade: "<<p->data.second<<endl;
+        p = p->next;
+    }
+}
+

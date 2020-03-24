@@ -1,0 +1,61 @@
+//
+//  main.cpp
+//  字典数据结构
+//
+//  Created by lq on 2019/9/23.
+//  Copyright ? 2019 Mr.liang. All rights reserved.
+//
+
+#include <iostream>
+#include "dictionarycreat.hpp"
+#include <string>
+
+using namespace std;
+
+int main(int argc, const char * argv[]) {
+    // insert code here...
+    dictionary_creat students;
+    student stu_info;
+    string stu_name;
+    float stu_grade;
+    int member;
+    cout<<"please input sum of students: "<<endl;
+    cin>>member;
+    for(int i = 0;i<member;i++)
+    {
+        cout<<"round #"<<i+1<<":"<<endl;
+        cout<<"please input student name:"<<endl;
+        cin>>stu_name;
+        while(cin.fail())
+        {
+            cin.clear();
+            while(cin.get()!='\n')
+            {
+                continue;
+            }
+            cout<<"please input again."<<endl;
+            cin>>stu_name;
+        }
+        cout<<"please input student grade:"<<endl;
+        cin>>stu_grade;
+        while(cin.fail())
+        {
+            cin.clear();
+            while(cin.get()!='\n')
+            {
+                continue;
+            }
+            cout<<"please input again."<<endl;
+            cin>>stu_grade;
+        }
+        stu_info = make_pair(stu_name, stu_grade);
+        students.insert(stu_info);
+    }
+    students.show();
+    cout<<"the result of empty check is "<<students.empty_check()<<endl;
+    students.find("Mike");
+    students.erase("Mike");
+    students.show();
+    return 0;
+}
+

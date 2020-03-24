@@ -1,0 +1,27 @@
+please input sum of students: 
+3
+round #1:
+please input student name:
+Bob
+please input student grade:
+150
+round #2:
+please input student name:
+Mike
+please input student grade:
+Mike
+please input again.
+143
+round #3:
+please input student name:
+Alice
+please input student grade:
+141
+student name: Bob student grade: 150
+student name: Mike student grade: 143
+student name: Alice student grade: 141
+the result of empty check is 0
+the grade for Mike is 143student name: Bob student grade: 150
+student name: Alice student grade: 141
+bye
+Program ended with exit code: 0

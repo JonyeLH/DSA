@@ -1,0 +1,52 @@
+//
+//  dictionarycreat.hpp
+//  字典数据结构
+//
+//  Created by lq on 2019/9/23.
+//  Copyright ? 2019 Mr.liang. All rights reserved.
+//
+
+#ifndef dictionarycreat_hpp
+#define dictionarycreat_hpp
+#include <iostream>
+#include <string>
+using namespace std;
+//使用typedef简化pair类型的声明
+typedef pair<string, float> student;
+
+struct node//定义链表节点
+{
+    node* next;
+    node* last;
+    student data;//data为一个pair类型的数据
+};
+
+class dictionary_creat
+{
+private:
+    node* head;
+    node* tail;
+    int length;//链表长度
+public:
+    dictionary_creat();
+    ~dictionary_creat();
+    
+    //检查是否为空，链表为空返回true，否则返回false
+    bool empty_check();
+    //返回链表长度
+    int get_size();
+    //插入数对(pair类型)
+    void insert(student & element);
+    //按姓名删除对象
+    void erase(const string name);
+    //按分数查找所有符合的学生姓名
+    student find(const float grade);
+    //按姓名查找对应成绩
+    student find(const string name);
+    //遍历输出链表
+    void show()const;
+};
+
+
+#endif /* dictionarycreat_hpp */
+

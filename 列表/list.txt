@@ -1,0 +1,100 @@
+function List(){
+  this.listSize = 0;
+  this.pos = 0;
+  this.dataStore = [];
+
+  //查找
+  this.find = function(element){
+    return dataStore.indexOf(element);
+  };
+
+  //追加元素
+  this.append = function(element){
+    this.dataStore[this.listSize++] = element;
+  };
+
+  //删除元素
+  this.remove = function(element){
+    var foundAt = this.find(element);
+    if(foundAt > -1){
+      this.dataStore.splice(foundAt, 1);
+      --this.listSize;
+      return true;
+    }
+    return false;
+  };
+
+  //得到长度
+  this.getLength = function(){
+    return this.listSize;
+  };
+
+  //插入元素
+  this.insert = function(element, after){
+    var insertPos = this.find(after);
+    if(insertPos > -1){
+      this.dataStore.splice(insertPos+1, 0, element);
+      ++this.listSize;
+      return true;
+    }
+    return false;
+  };
+
+  //清空列表
+  this.clear = function(){
+    delete this.dataStore;
+    this.dataStore.length = 0;
+    this.listSize = this.pos = 0;
+  };
+
+  //判断是否包含某元素
+  this.contains = function(element){
+    return this.find(element) !== -1;
+  };
+
+  //转换为字符串
+  this.toString = function(){
+    return this.dataStore.join(",");
+  };
+
+  //把指针移到最前
+  this.front = function(){
+    this.pos = 0;
+  };
+
+  //把指针移到最后
+  this.end = function(){
+    this.pos = this.listSize - 1;
+  };
+
+  //前移指针
+  this.prev = function(){
+    if(this.pos > 0)
+      --this.pos;
+  };
+
+  //后移指针
+  this.next = function(){
+    if(this.pos < this.listSize - 1)
+      ++this.pos;
+  };
+
+  //得到指针当前位置
+  this.currPos = function(){
+    return this.pos;
+  };
+
+  //把指针移到posi
+  this.moveTo = function(posi){
+    if(posi < this.listSize && posi >= 0){
+        this.pos = position;
+        return true;
+    }
+    return false;
+  };
+
+  //得到当前指针位置元素
+  this.getElement = function(){
+    return this.dataStore[this.pos];
+  };
+}

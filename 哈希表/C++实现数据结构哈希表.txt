@@ -1,0 +1,201 @@
+#include<iostream>
+#include<string>
+#include <iomanip>
+using namespace std;
+#define HMax 8
+
+typedef struct node
+{
+	double key;
+	string name;
+	string address;
+	node *next;
+}*list;
+
+list HST[HMax];
+
+int Hash(double k)//电话号码处理
+{
+	int sum = 0;
+	int m;
+	while(k>0)
+	{
+		sum=sum + int(k) % 10;
+		k=k/10;
+	}
+
+	m = sum % 7;
+	return m;
+}
+
+void HashinsertChain(list HST[],double key,string name,string address)//查找并写入信息
+{
+	node *p,*s;
+	int n;
+	n = Hash(key);
+	if(HST[n] == NULL)
+	{
+		p = new node;
+		p->key = key;
+		p->name = name;
+		p->address = address;
+		p->next = NULL;
+		HST[n] = p;
+	}
+	else
+	{
+		s = HST[n];
+		while(s->next != NULL && s->key != key)
+			s = s->next;
+		if(s->key == key)
+		{
+			cout<<s->name <<"已存在！"<<endl;
+			return;
+		}
+		else
+		{
+			p=new node();
+			p->key = key;
+			p->name = name;
+			p->address = address;
+			p->next = NULL;
+			s->next = p;
+		}
+	}
+}
+
+void HashsearchChain(list HST[],double key)   //查找关键字为key
+{
+	int n;
+	node *q;
+	n = Hash(key);
+	q = HST[n];
+	while(q!=NULL && q->key != key)
+		q = q->next;
+	if(q == NULL)
+	cout<<"无此号码！"<<endl;
+	else
+	{
+		cout << fixed << setprecision(2);
+		cout<<"姓名："<<q->name<<"  电话：";
+		cout<<q->key;
+		cout<<"  地址："<<q->address<<endl;
+	}
+}
+void HashdeleteChain(list HST[],double key)
+{
+	int n;
+	n = Hash(key);
+	if(HST[n] == NULL)
+	{
+		cout<<"无此号码！";
+		return;
+	}
+	else
+	{
+		node *p,*s;
+		s=HST[n];
+		p=NULL;
+		while(s->next != NULL && s->key != key)
+		{
+			p=s;
+			s=s->next;
+		}
+		if(s->key==key)
+		{
+			cout << fixed << setprecision(0);
+			cout<<"要删除的信息是："<<"姓名："<<s->name <<"  电话：";
+			cout<<s->key;
+			cout<<"  地址："<<s->address<<endl;
+
+			cout<<"是否删除？！是则输入Y，否输入N：";
+			string a;
+			cin>>a;
+			if(a=="Y")
+			{
+				if(p==NULL)
+					HST[n]=s->next;
+				else
+					p->next=s->next;
+				delete s;
+				cout<<"删除成功！";
+			}
+			else
+				return;
+		}
+		else
+			cout<<"查无此号码！"<<endl;
+	}
+}
+void HashcreateChain(list HST[])//输入信息
+{
+	double key;
+	string name,address;
+	cout<<"依次输入姓名 电话号码  地址：";
+	cin >> name >> key >> address;
+	HashinsertChain(HST,key,name,address);
+}
+void HashshowChain(list HST[])
+{
+	for(int i=0;i<HMax;i++)
+	{
+		node *p;
+		p=HST[i];
+		while(p!=NULL)
+		{
+			cout << fixed << setprecision(0);
+			cout<<"姓名："<<p->name<<"  电话：";
+			cout<<p->key;
+			cout<<"  地址："<<p->address<<endl;
+			p=p->next;
+		}
+	}
+}
+void view()
+{
+	cout << "----------------------------------------"<<endl;
+	cout << "               1.添加数据               "<<endl;
+	cout << "               2.查找数据               "<<endl;
+	cout << "               3.删除数据               "<< endl;
+	cout << "               4.显示所有数据           "<< endl;
+	cout << "----------------------------------------"<< endl;
+	long  a;
+	cout<<"请选择要进行操作：";
+	cin>>a;
+	if (a != 1 && a != 2 && a != 3 && a!=4)
+	{
+		cout <<endl<< "错误！请重新输入！";
+		cin >> a;
+	}
+	switch(a)
+	{
+	case 1:
+		HashcreateChain(HST);
+		break;
+	case 2:
+		double snum;
+		cout << "输入要查找的电话号码：";
+		cin >>snum;
+		HashsearchChain(HST,snum);
+		break;
+	case 3: 
+		double  dnum;
+		cout << "输入要删除的电话号码：";
+		cin >> dnum;
+		HashdeleteChain(HST,dnum);
+		break;
+	case 4:
+		HashshowChain(HST);
+	}
+	cout<<"输入0返回主菜单,输入其他任意键退出系统！"<<endl;
+	int c;
+	cin>>c;
+	if(c == 0)
+		view();
+}
+void main()
+{
+	cout << "             电话号码查询系统         "<<endl;
+	view();
+	system("pause");
+}
