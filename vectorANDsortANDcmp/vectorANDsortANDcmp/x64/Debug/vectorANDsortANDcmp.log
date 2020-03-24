@@ -1,0 +1,15 @@
+﻿生成启动时间为 2020/2/24 11:35:55。
+     1>项目“D:\个人文档\数据结构\小甲鱼数据结构\代码实践\C++test\vectorANDsortANDcmp\vectorANDsortANDcmp\vectorANDsortANDcmp.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\VS\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt vectorANDsort.cpp
+         vectorANDsort.cpp
+       Link:
+         D:\VS\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\个人文档\数据结构\小甲鱼数据结构\代码实践\C++test\vectorANDsortANDcmp\x64\Debug\vectorANDsortANDcmp.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\个人文档\数据结构\小甲鱼数据结构\代码实践\C++test\vectorANDsortANDcmp\x64\Debug\vectorANDsortANDcmp.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\个人文档\数据结构\小甲鱼数据结构\代码实践\C++test\vectorANDsortANDcmp\x64\Debug\vectorANDsortANDcmp.lib" /MACHINE:X64 "x64\Debug\异或运算符^.obj"
+         "x64\Debug\随意测试.obj"
+         x64\Debug\vectorANDsort.obj
+         vectorANDsortANDcmp.vcxproj -> D:\个人文档\数据结构\小甲鱼数据结构\代码实践\C++test\vectorANDsortANDcmp\x64\Debug\vectorANDsortANDcmp.exe
+     1>已完成生成项目“D:\个人文档\数据结构\小甲鱼数据结构\代码实践\C++test\vectorANDsortANDcmp\vectorANDsortANDcmp\vectorANDsortANDcmp.vcxproj”(Build 个目标)的操作。
+
+已成功生成。
+
+已用时间 00:00:01.91

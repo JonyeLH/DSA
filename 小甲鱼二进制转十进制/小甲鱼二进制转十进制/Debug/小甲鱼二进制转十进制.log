@@ -1,0 +1,4 @@
+﻿  进制转换.cpp
+c:\users\12185\desktop\c++test\小甲鱼二进制转十进制\小甲鱼二进制转十进制\进制转换.cpp(93): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+  小甲鱼二进制转十进制.vcxproj -> C:\Users\12185\Desktop\C++test\小甲鱼二进制转十进制\Debug\小甲鱼二进制转十进制.exe
+  小甲鱼二进制转十进制.vcxproj -> C:\Users\12185\Desktop\C++test\小甲鱼二进制转十进制\Debug\小甲鱼二进制转十进制.pdb (Full PDB)
