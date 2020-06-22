@@ -19,11 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{54BEE44D-C769-41D0-9DFF-3D0F7067AF49}</ProjectGuid>
+    <ProjectGuid>{DDE278A9-2B50-4AD2-A829-441A778C593D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>sort</RootNamespace>
+    <RootNamespace>search</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>Sort</ProjectName>
+    <ProjectName>Search</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -147,18 +147,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Bubblesort.h" />
-    <ClCompile Include="Heapsort.h" />
-    <ClCompile Include="Insertsort.h" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Mergesort.h" />
-    <ClCompile Include="Quicksort.h" />
-    <ClCompile Include="Quicksort1.h" />
-    <ClCompile Include="Quicksort2.h" />
-    <ClCompile Include="Quicksort3.h" />
-    <ClCompile Include="Quicksort4.h" />
-    <ClCompile Include="Seletesort.h" />
-    <ClCompile Include="Shellsort.h" />
+    <ClInclude Include="biTree.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="binary_Search.cpp" />
+    <ClCompile Include="BST_search.cpp" />
+    <ClCompile Include="BST_serach_2.cpp" />
+    <ClCompile Include="Febi_search.cpp" />
+    <ClCompile Include="HashTable.cpp" />
+    <ClCompile Include="Insert_search.cpp" />
+    <ClCompile Include="Sq_search.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

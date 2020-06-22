@@ -49,18 +49,18 @@ void Quicksort(int k[], int n)
 	Qsort(k, 0, n - 1);
 }
 
-int main()
-{
-	int i, a[10] = { 5,2,6,0,3,9,1,7,4,8 };
-
-	Quicksort(a, 10);
-
-	cout << "输出结果是：";
-	for (i = 0; i < 10; i++)
-	{
-		cout << a[i];
-	}
-
-	system("pause");
-	return 0;
-}
+//int main()
+//{
+//	int i, a[10] = { 5,2,6,0,3,9,1,7,4,8 };
+//
+//	Quicksort(a, 10);
+//
+//	cout << "输出结果是：";
+//	for (i = 0; i < 10; i++)
+//	{
+//		cout << a[i];
+//	}
+//
+//	system("pause");
+//	return 0;
+//}

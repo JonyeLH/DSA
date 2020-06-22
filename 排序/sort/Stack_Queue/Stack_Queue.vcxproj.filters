@@ -15,40 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="Queue.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Shellsort.h">
+    <ClCompile Include="Stack.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Seletesort.h">
+    <ClCompile Include="大话.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Quicksort4.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Quicksort3.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Quicksort2.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Quicksort1.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Bubblesort.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Heapsort.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Mergesort.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Quicksort.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Insertsort.h">
+    <ClCompile Include="快速判断中间节点.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

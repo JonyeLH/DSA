@@ -15,40 +15,30 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
+    <ClInclude Include="biTree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="binary_Search.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Shellsort.h">
+    <ClCompile Include="BST_search.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Seletesort.h">
+    <ClCompile Include="BST_serach_2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Quicksort4.h">
+    <ClCompile Include="Febi_search.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Quicksort3.h">
+    <ClCompile Include="HashTable.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Quicksort2.h">
+    <ClCompile Include="Insert_search.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Quicksort1.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Bubblesort.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Heapsort.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Mergesort.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Quicksort.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Insertsort.h">
+    <ClCompile Include="Sq_search.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

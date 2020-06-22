@@ -19,11 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{54BEE44D-C769-41D0-9DFF-3D0F7067AF49}</ProjectGuid>
+    <ProjectGuid>{F449070D-BCF7-40E9-B3E3-44FE8138B483}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>sort</RootNamespace>
+    <RootNamespace>Tree</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>Sort</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -147,18 +146,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Bubblesort.h" />
-    <ClCompile Include="Heapsort.h" />
-    <ClCompile Include="Insertsort.h" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Mergesort.h" />
-    <ClCompile Include="Quicksort.h" />
-    <ClCompile Include="Quicksort1.h" />
-    <ClCompile Include="Quicksort2.h" />
-    <ClCompile Include="Quicksort3.h" />
-    <ClCompile Include="Quicksort4.h" />
-    <ClCompile Include="Seletesort.h" />
-    <ClCompile Include="Shellsort.h" />
+    <ClCompile Include="二叉树.cpp" />
+    <ClCompile Include="线索二叉树.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

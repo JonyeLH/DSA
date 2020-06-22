@@ -15,40 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
+    <ClInclude Include="List.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="1、线性表的顺序存储.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Shellsort.h">
+    <ClCompile Include="2、线性表的链式存储.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Seletesort.h">
+    <ClCompile Include="3、线性表的静态链表.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Quicksort4.h">
+    <ClCompile Include="4、线性表的循环链表.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Quicksort3.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Quicksort2.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Quicksort1.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Bubblesort.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Heapsort.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Mergesort.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Quicksort.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Insertsort.h">
+    <ClCompile Include="5、线性表的双向链表.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

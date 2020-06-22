@@ -19,11 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{54BEE44D-C769-41D0-9DFF-3D0F7067AF49}</ProjectGuid>
+    <ProjectGuid>{9687E897-0CB7-4175-A507-E98B20084216}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>sort</RootNamespace>
+    <RootNamespace>Stack_Queue</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>Sort</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -147,18 +146,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Bubblesort.h" />
-    <ClCompile Include="Heapsort.h" />
-    <ClCompile Include="Insertsort.h" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Mergesort.h" />
-    <ClCompile Include="Quicksort.h" />
-    <ClCompile Include="Quicksort1.h" />
-    <ClCompile Include="Quicksort2.h" />
-    <ClCompile Include="Quicksort3.h" />
-    <ClCompile Include="Quicksort4.h" />
-    <ClCompile Include="Seletesort.h" />
-    <ClCompile Include="Shellsort.h" />
+    <ClCompile Include="Queue.cpp" />
+    <ClCompile Include="Stack.cpp" />
+    <ClCompile Include="大话.cpp" />
+    <ClCompile Include="快速判断中间节点.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
